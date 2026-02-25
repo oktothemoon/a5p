@@ -1,7 +1,8 @@
 ---
 title: Markdown
+cover: 'https://www.freedidi.com/wp-content/uploads/2026/02/1%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE-2026-02-23-202254-520x292.webp'
 tags:
-  - markdown
+    - markdown
 createTime: 2026/02/25 20:20:15
 permalink: /blog/v7mhuv2e/
 ---
@@ -68,11 +69,11 @@ H~2~O
 - [x] 任务列表3
 - [x] 任务列表4
 
-| Tables        | Are           | Cool  |
-| ------------- |:-------------:| -----:|
+| Tables        |      Are      |  Cool |
+| ------------- | :-----------: | ----: |
 | col 3 is      | right-aligned | $1600 |
-| col 2 is      | centered      |   $12 |
-| zebra stripes | are neat      |    $1 |
+| col 2 is      |   centered    |   $12 |
+| zebra stripes |   are neat    |    $1 |
 
 > 引用内容
 >
@@ -100,6 +101,7 @@ H~2~O
 **demo wrapper：**
 
 ::: demo-wrapper title="示例" no-padding height="200px"
+
 <style scoped>
 .open-door {
   display: flex;
@@ -127,15 +129,15 @@ const c = a + b
 
 // [!code word:obj]
 const obj = {
-  toLong: {
-    deep: {
-      deep: {
+    toLong: {
         deep: {
-          value: 'this is to long text. this is to long text. this is to long text. this is to long text.', // [!code highlight]
-        }
-      }
-    }
-  }
+            deep: {
+                deep: {
+                    value: 'this is to long text. this is to long text. this is to long text. this is to long text.', // [!code highlight]
+                },
+            },
+        },
+    },
 }
 ```
 
@@ -164,15 +166,15 @@ const c: number = a + b
 
 ```ts
 function foo() {
-  const a = 1 // [!code highlight]
+    const a = 1 // [!code highlight]
 
-  console.log(a)
+    console.log(a)
 
-  const b = 2 // [!code ++]
-  const c = 3 // [!code --]
+    const b = 2 // [!code ++]
+    const c = 3 // [!code --]
 
-  console.log(a + b + c) // [!code error]
-  console.log(a + b) // [!code warning]
+    console.log(a + b + c) // [!code error]
+    console.log(a + b) // [!code warning]
 }
 ```
 
@@ -180,7 +182,7 @@ function foo() {
 
 ```ts
 function foo() {
-  const a = 1 // [!code focus]
+    const a = 1 // [!code focus]
 }
 ```
 
@@ -287,7 +289,7 @@ const c = a + b
 
 ```html
 <div id="app">
-  <h3>vuepress-theme-plume</h3>
+    <h3>vuepress-theme-plume</h3>
 </div>
 ```
 
@@ -303,8 +305,8 @@ app.appendChild(window.document.createElement('small')).textContent = a
 
 ```css
 #app {
-  font-size: 2em;
-  text-align: center;
+    font-size: 2em;
+    text-align: center;
 }
 ```
 

@@ -40,6 +40,30 @@ export default defineUserConfig({
             },
         ],
     ],
+    collections: [
+        {
+            type: 'post',
+            dir: 'blog',
+            title: '博客',
+            meta: {
+                tags: true, // 是否显示标签
+                /**
+                 * 是否显示创建时间，或设置时间格式
+                 * - 'short': 显示为 `2022-01-01`，默认
+                 * - 'long': 显示为 `2022-01-01 00:00:00`
+                 */
+                createTime: true, // boolean | 'short' | 'long'
+                readingTime: true, // 是否显示阅读时间估算
+                // wordCount: false, // 是否显示字数统计
+            },
+            postCover: {
+                // layout: 'left',
+                // ratio: '16:9',
+                // width: 300,
+                // compact: true,
+            },
+        },
+    ],
 
     bundler: viteBundler(),
     shouldPrefetch: false, // 站点较大，页面数量较多时，不建议启用
@@ -47,6 +71,12 @@ export default defineUserConfig({
     theme: plumeTheme({
         /* 添加您的部署域名, 有助于 SEO, 生成 sitemap */
         hostname: 'https://appppp.com/',
+        autoFrontmatter: {
+            title: true, // 自动生成标题
+            createTime: true, // 自动生成创建时间
+            permalink: true, // 自动生成永久链接
+            cover: true,
+        },
 
         /* 文档仓库配置，用于 editLink */
         // docsRepo: '',

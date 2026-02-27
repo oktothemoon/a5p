@@ -1,6 +1,6 @@
 ---
 title: Markdown
-cover: 'https://www.freedidi.com/wp-content/uploads/2026/02/1%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE-2026-02-23-202254-520x292.webp'
+cover: 'https://picsum.photos/400/300?random=1'
 
 tags:
     - markdown

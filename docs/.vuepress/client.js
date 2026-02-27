@@ -5,9 +5,13 @@ import { defineClientConfig } from 'vuepress/client'
 // import Swiper from 'vuepress-theme-plume/features/Swiper.vue'
 import CustomComponent from './theme/components/Custom.vue'
 import './styles/index.css'
+import Layout from './layouts/Layout.vue'
 // import './theme/styles/custom.css'
 
 export default defineClientConfig({
+    layouts: {
+        Layout,
+    },
     enhance({ app }) {
         // built-in components
         // app.component('RepoCard', RepoCard)

@@ -12,7 +12,8 @@
 import { viteBundler } from '@vuepress/bundler-vite'
 import { defineUserConfig } from 'vuepress'
 import { plumeTheme } from 'vuepress-theme-plume'
-
+import { getDirname, path } from 'vuepress/utils'
+const __dirname = getDirname(import.meta.url)
 export default defineUserConfig({
     base: '/',
     lang: 'zh-CN',
@@ -67,7 +68,6 @@ export default defineUserConfig({
 
     bundler: viteBundler(),
     shouldPrefetch: false, // 站点较大，页面数量较多时，不建议启用
-
     theme: plumeTheme({
         /* 添加您的部署域名, 有助于 SEO, 生成 sitemap */
         hostname: 'https://appppp.com/',
@@ -224,4 +224,10 @@ export default defineUserConfig({
         //   locale: 'all',  // 为所有语言生成 llms 友好内容
         // }
     }),
+    alias: {
+        '@theme/VPPostItem.vue': path.resolve(
+            __dirname,
+            './components/postItem.vue',
+        ),
+    },
 })

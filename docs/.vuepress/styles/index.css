@@ -41,6 +41,7 @@
     width: 100%;
     height: auto; /* 让高度自适应内容 */
     break-inside: avoid; /* 防止在瀑布流中被截断 */
+    margin: 0 auto;
 
     /* 添加平滑的阴影效果，让卡片更有层次感（可选） */
     transition:

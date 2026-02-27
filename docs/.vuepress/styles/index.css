@@ -1,0 +1,80 @@
+/* .vuepress/styles/index.css */
+
+/* 文章列表容器 - 瀑布流网格布局 */
+.vp-post-list {
+    display: grid !important;
+    /* 默认：移动端显示1列 */
+    grid-template-columns: 1fr;
+    gap: 24px; /* 卡片之间的间距，可以稍微大一点更美观 */
+
+    /* 添加一些内边距，让卡片不贴边 */
+    /* padding: 1rem 0; */
+}
+
+/* 平板设备：屏幕宽度 ≥ 768px 时显示2列 */
+@media (min-width: 768px) {
+    .vp-post-list {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 24px 20px; /* 行间距24px，列间距20px */
+    }
+}
+
+/* 桌面设备：屏幕宽度 ≥ 1024px 时显示3列 */
+@media (min-width: 1024px) {
+    .vp-post-list {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+/* 宽屏设备：屏幕宽度 ≥ 1440px 时显示4列 */
+@media (min-width: 1440px) {
+    .posts-container {
+        max-width: 1400px !important;
+    }
+    .vp-post-list {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+/* 文章卡片样式优化（如果需要调整卡片内部样式） */
+.vp-post-list .vp-post-item {
+    width: 100%;
+    height: auto; /* 让高度自适应内容 */
+    break-inside: avoid; /* 防止在瀑布流中被截断 */
+
+    /* 添加平滑的阴影效果，让卡片更有层次感（可选） */
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+/* 卡片悬停效果（可选，增加交互感） */
+.vp-post-list .vp-post-item:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 24px -8px rgba(0, 0, 0, 0.15);
+}
+
+/* 确保卡片内的图片自适应宽度 */
+.vp-post-list .vp-post-item img {
+    max-width: 100%;
+    height: auto;
+    display: block; /* 移除图片底部的多余空白 */
+}
+
+/* 2. 分页组件 - 单独一行，不参与瀑布流 */
+.vp-pagination {
+    /* 强制占满整个宽度，单独一行 */
+    width: 100% !important;
+    max-width: 100% !important;
+    flex-basis: 100% !important;
+
+    /* 添加上下边距，与文章列表分开 */
+    margin-top: 2rem !important;
+    margin-bottom: 1rem !important;
+
+    /* 确保它不是grid的子项，或者让它单独占一行 */
+    grid-column: 1 / -1 !important; /* 如果它在grid内，强制占满整行 */
+
+    /* 文本居中（可选） */
+    text-align: center !important;
+}

@@ -4,7 +4,7 @@ import { defineClientConfig } from 'vuepress/client'
 // import NpmBadgeGroup from 'vuepress-theme-plume/features/NpmBadgeGroup.vue'
 // import Swiper from 'vuepress-theme-plume/features/Swiper.vue'
 import CustomComponent from './theme/components/Custom.vue'
-
+import './styles/index.css'
 // import './theme/styles/custom.css'
 
 export default defineClientConfig({
